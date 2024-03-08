@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title-name">KANBAN BOARD</div>
+    <header class="header-container">
+        <div class="category-wrapper">
+            <div class="category p1" data-category="p1"></div>
+            <div class="category p2" data-category="p2"></div>
+            <div class="category p3" data-category="p3"></div>
+            <div class="category p4" data-category="p4"></div>
+        </div>
+        <div class="action-wrapper">
+            <div class="action add">+</div>
+            <div class="action delete">X</div>
+            <div class="action edit"><i class="fa-duotone fa-pen"></i></div>
+        </div>
+        <div class="tasks-search">
+            <input type="text" placeholder="Search Title or Id">
+        </div>
+    </header>
+    <div class="category-section-container">
+        <section class="tasks-wrapper">
+            <div class="Backlog box">
+                <div class="box-title">Backlog</div>
+                <div class="backlog flex"></div>
+            </div>
+            <div class="Doing box">
+                <div class="box-title">Doing</div>
+                <div class="doing flex"></div>
+            </div>
+            <div class="Review box">
+                <div class="box-title">Review</div>
+                <div class="review flex"></div>
+            </div>
+            <div class="Done box">
+                <div class="box-title">Done</div>
+                <div class="done flex"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <section class="tasks-wrapper"></section> -->
+
+    <div class="model hide">
+        <div class="left-section">
+            <input type="text" placeholder="Enter Task Name">
+            <textarea placeholder="Enter Your Task"></textarea>
+            <button class="add-btn">Add</button>
+        </div>
+        <div class="right-section">
+            <div class="category p1" data-category="p1"></div>
+            <div class="category p2" data-category="p2"></div>
+            <div class="category p3" data-category="p3"></div>
+            <div class="category p4" data-category="p4"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
