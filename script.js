@@ -162,7 +162,8 @@ function createTask(task) {
     textareaRef.addEventListener('change', e => {
         const updatedTextArea = e.target.value;
         const currentTaskId = task.id;
-        updateTitle(updatedTextArea, currentTaskId);
+        // updateTitle(updatedTextArea, currentTaskId);
+        updateTaskContent(updatedTextArea, currentTaskId);
         // console.log(updatedTextArea)
     })
 }
@@ -253,20 +254,20 @@ function updatePriorityInCache(taskId, nextPriority) {
 }
 
 //Update Title data in Cache
-function updateTitle(newTextare, taskId) {
-    tasks.forEach(task => {
-        if (Number(task.id) === Number(taskId)) {
-            task.title = newTextare;
-        }
-    })
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-}
+// function updateTitle(newTextare, taskId) {
+//     tasks.forEach(task => {
+//         if (Number(task.id) === Number(taskId)) {
+//             task.title = newTextare;
+//         }
+//     })
+//     localStorage.setItem('tasks', JSON.stringify(tasks));
+// }
 
 //Update Title data in Cache
-function updateTask(newTextare, taskId) {
+function updateTaskContent(newTextare, taskId) {
     tasks.forEach(task => {
         if (Number(task.id) === Number(taskId)) {
-            task.title = newTextare;
+            task.taskContent = newTextare;
         }
     })
     localStorage.setItem('tasks', JSON.stringify(tasks));
